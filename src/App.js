@@ -1,121 +1,145 @@
-import React, { Component } from 'react';
-import {Route, Switch} from 'react-router-dom';
-import { withRouter } from 'react-router'
+import React from "react";
 import { ThemeProvider } from "styled-components";
-import { MobileAndTablet, Desktop } from 'react-responsive-simple';
-import { GlobalStyles, Theme } from "./util/GlobalStyles";
-// Hello world
-import HomeContainer from './containers/HomeContainer'
-import NewsContainer from './containers/NewsContainer'
-import OpinionContainer from './containers/OpinionContainer'
-import SportsContainer from './containers/SportsContainer'
-import EyeContainer from './containers/EyeContainer'
-import PhotoContainer from './containers/PhotoContainer'
-// import DesignContainer from './containers/DesignContainer'
-import AEContainer from './containers/AEContainer'
-import SpectrumContainer from './containers/SpectrumContainer'
-import GraphicsContainer from './containers/GraphicsContainer'
-import IllustrationsContainer from './containers/IllustrationsContainer'
+import { GlobalStyles, Theme } from "./utils/Styles";
+import GlobalData from "./utils/GlobalData";
 
-import NavBar from './components/Navigation/NavBar' 
-import Footer from './components/Footer'
-import ScrollArrow from './components/ScrollArrow'
+import Title from "./containers/Title";
+import Section from "./containers/Section";
+import Acknowledgements from "./components/Acknowledgements";
+import Articles from "./containers/Articles";
 
-import data from './util/GlobalArticleData'
-import { NavItems, NavItemsWithHome } from "./util/NavItems";
+const sectionNames = [
+  "Homecoming",
+  "Sports",
+  "A&E",
+  "Opinion",
+  "Acknowledgments",
+];
 
-import PreloadProvider, { PreloadContext } from "./util/Preload"
+class App extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.classDaysRef = React.createRef();
+    this.seniorProfRef = React.createRef();
+    this.seniorColRef = React.createRef();
+    this.handleScroll = this.handleScroll.bind(this);
+    this.navigateTo = this.navigateTo.bind(this);
+    this.prevScroll = 0;
+    this.state = {
+      navActive: 0,
+    };
 
-class App extends Component {
+    this.sections = {
+      Homecoming: {
+        description:
+          "Dear readers, \n \nMore than ever, this year’s Homecoming truly feels like coming home. Many of us spent last year away from Morningside Heights, creating a Columbia community from the confines of our bedrooms. While not back in full swing, after 18 months we are back to campus, back to the Baker Athletics Complex, and most importantly, back to being a unified community. \n\n At Spectator, we have used our year of remote learning to reevaluate what it means to be a Columbia student and a member of the greater Morningside Heights and West Harlem communities. Despite being back on campus, many students from all class years still struggle with feeling fully ingrained at Columbia. Homecoming weekend serves as a time to come together and to help find your community whether you are a first-year, senior, or even an alum.\n\nWhether you are the biggest Columbia Lions fan out there, or have never stepped foot near a football stadium, we hope this edition shows you that Homecoming is more than just watching the Light Blue play against Penn. It’s about looking back at memories at the University, but also looking forward.\n\n We invite you to take a look back on the stories that have shaped Homecoming this year, prepare for Saturday afternoon’s game, and reflect on the last 250 years of education and community. \n\nSarah Braka, \nEditor in Chief, President\nLizzie Karpen,\nManaging Editor, Vice President",
+        ref: this.seniorColRef,
+        miniTitle: "PHOTO ESSAY",
+        // link: "https://www.columbiaspectator.com/the-eye/2021/04/29/if-youre-reading-this-its-late/",
+        // img: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/5AJHA7YTUNEJLOO4XNLCT7NPEE.jpg"
+
+        // articles: GlobalData.Homecoming
+        // ad: "https://commencement2021.s3.amazonaws.com/TelAviv_ad.png"
+      },
+    };
+  }
+  navigateTo(i) {
+    switch (i) {
+      case 0:
+        window.scrollTo({
+          top: this.classDaysRef.current.offsetTop,
+          behavior: "smooth",
+        });
+        break;
+      case 1:
+        window.scrollTo({
+          top: this.seniorProfRef.current.offsetTop,
+          behavior: "smooth",
+        });
+        break;
+      case 2:
+        window.scrollTo({
+          top: this.seniorColRef.current.offsetTop,
+          behavior: "smooth",
+        });
+        break;
+      default:
+        break;
+    }
+  }
+
+  handleScroll(e) {
+    // const top1 = this.classDaysRef.current.offsetTop
+    // const top2 = this.seniorProfRef.current.offsetTop
+    // const top2 = this.seniorColRef.current.offsetTop
+    // const currScroll = window.scrollY
+    // const winHeight = window.innerHeight
+    // const adjustedScroll = currScroll + 0.4 * winHeight
+    // let scrollingUp = this.prevScroll > window.scrollY
+    // if(adjustedScroll > top1 && adjustedScroll < top2){
+    //   this.setState({navActive: 0})
+    // }
+    // if(adjustedScroll > top2) { // && adjustedScroll < top3
+    //   this.setState({navActive: 1})
+    // }
+    // if(adjustedScroll > top3){
+    //   this.setState({navActive: 2})
+    // }
+    // this.prevScroll = currScroll
+  }
+
+  // componentDidMount(){
+  //     window.addEventListener('scroll', this.handleScroll)
+  // }
+
+  // componentWillUnmount(){
+  //     window.removeEventListener('scroll', this.handleScroll);
+  // }
 
   render() {
-    const home = () => <HomeContainer /> 
-    const news = () => <NewsContainer data = {data.News} />
-    const opinion = () => <OpinionContainer data={data.Opinion}/>
-    const eye = () => <EyeContainer data = {data.Eye}/>
-    const photo = () => <PhotoContainer data = {data.Photos}/>
-    // const design = () => <DesignContainer data = {data.Design} />
-    const sports = () => <SportsContainer data = {data.Sports} />
-    const ane = () => <AEContainer data = {data["A&E"]}/>
-    const spectrum = () => <SpectrumContainer data = {data.Spectrum} />
-    const graphics = () => <GraphicsContainer data = {data.Graphics} />
-    const illo = () => <IllustrationsContainer data = {data.Illustrations} />
-
     return (
-      <PreloadProvider>
-        <PreloadContext.Consumer>
-          {
-            context => {
-              context(...[
-                "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/JW6DJYNU7ZDBRFWIZTN63PEOFQ.jpg", 
-                "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/P7DW6KY22FFTXMCVW775DECW4I.jpg", 
-                "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/VJUOERXVV5ECNHIPYC2PA7MP6U.jpg", 
-                "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/2BJ7JBTK6VCE7OX26ZXSWP7CYI.jpg", 
-                "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/OVEYVGU2JBCLNJQ3SOR2W7PATA.jpg", 
-                "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/RFQU6XEJLRDKXA5ZHNWG276K7A.jpg", 
-                "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/Y626ZB4HTVBAZFURTW5VW5KB3Q.jpg", 
-                "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/B6RNHORFG5GPTOPN36RGGQU3SU.jpg", 
-                "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/LXE2HLEOIFBNVOEB7SKMXOLGEY.jpg", 
-                "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/E266HXM2OVEOFGPPS3JDGUY6JU.jpg", 
-                "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/SOYHFVU2TBENXCNOASVNCAOJMU.jpg", 
-                "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/DBL3MWCR5VFAVJH25TO2VN3JQM.jpg", 
-                "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/PJOCD2HXBRAEJI6QIUG7SHOQFU.jpg", 
-                "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/WOKJFWLTZNE3DAF426QEQN2BZU.jpg", 
-                "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/KXOOUJZAVVHHZDDKUP22NVN4UY.jpg", 
-                "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/AO7BPB5J75AM3GVWOJRUJ26DT4.jpg", 
-                "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/VXZYC2UM7NBCFH354JCJQGW3KA.jpg", 
-                "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/Q6WUSCDQSNEU5BJFUSQRTDAYLQ.jpg", 
-                "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/NFETIQTJ2ZBZDCTWUAMKOCWK7Q.jpg", 
-                "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/REJGFYENKNESTKPXP4WE7XMK2I.jpg", 
-                "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/5KWTRHEBMRGW7GA4QACPCKV7ZU.jpg", 
-                "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/BDAGE66MXJBJXIDBL74BD735EI.jpg", 
-                "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/6JAB6MB7PRFR3NMX3UMLPY3DNE.jpg", 
-                "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/EUGNH3QL6RBN7OGD73TLWLUXRY.jpg", 
-                "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/7EG54IJEM5BQLLBEMC5F3JEWUE.jpg"])
-              return <ThemeProvider theme={Theme}>
-                <main>
-                  <GlobalStyles />
-                    <React.Fragment>
-                      <Desktop>
-                        {this.props.location.pathname === "/2020-year-review" ?
-                          <NavBar menuItems={NavItems} transparent hideCrown/>
-                        :
-                          <NavBar menuItems={NavItems} />
-                        }
-                      </Desktop>
-                      <MobileAndTablet>
-                        {this.props.location.pathname === "/spectrum"
-                          ? <NavBar menuItems={NavItemsWithHome}/> 
-                          : <NavBar menuItems={NavItemsWithHome} transparent/>
-                        }
-                      </MobileAndTablet>
-                      <Switch onUpdate={() => console.log("update")} >
-                        <Route exact path="/" component={home} />
-                        <Route exact path="/news" component={news} />
-                        <Route exact path="/opinion" component={opinion} />
-                        <Route exact path="/sports" component={sports} />
-                        <Route exact path="/arts-and-entertainment" component={ane} />
-                        <Route exact path="/eye" component={eye} />
-                        <Route exact path="/photo" component={photo} />
-                        <Route exact path="/graphics" component={graphics} />
-                        <Route exact path="/illustrations" component={illo} />
-                        <Route exact path="/spectrum" component={spectrum} />
-                        {/* <Route exact path="/design" component={design} /> */}
-                        
-                      </Switch>
-                      <Footer />
-                      <ScrollArrow />
-                    </React.Fragment>
-                </main>
-              </ThemeProvider>
-            }
-          }
-        </PreloadContext.Consumer>
-      </PreloadProvider>
+      <ThemeProvider theme={Theme}>
+        <React.Fragment>
+          <GlobalStyles />
+          <Title sections={sectionNames} navigateTo={this.navigateTo} />
+          {/* <Navbar active={this.state.navActive} sections={Object.keys(this.sections)} navigateTo={this.navigateTo}/> */}
+          {Object.keys(this.sections).map((section) => (
+            <Section
+              name={section}
+              blurb={this.sections[section].description}
+              // ad={this.sections[section].ad}
+              data={GlobalData[section]}
+              _ref={this.sections[section].ref}
+              miniTitle={this.sections[section].miniTitle}
+              // link = "https://www.columbiaspectator.com/the-eye/2021/04/29/if-youre-reading-this-its-late/"
+              // img = "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/5AJHA7YTUNEJLOO4XNLCT7NPEE.jpg"
+            />
+          ))}
+          <Articles
+            sections={[
+              {
+                title: "Sports",
+                articles: GlobalData.Sports,
+              },
+              {
+                title: "Arts and Entertainment",
+                articles: GlobalData["Arts and Entertainment"],
+              },
+              {
+                title: "Opinion",
+                articles: GlobalData.Opinion,
+              },
+              // {
+              //   title: "Photo",
+              //   articles: GlobalData.Photo,
+              // },
+            ]}
+          />
+          <Acknowledgements />
+        </React.Fragment>
+      </ThemeProvider>
     );
   }
 }
 
-export default withRouter(App);
-
-
+export default App;
