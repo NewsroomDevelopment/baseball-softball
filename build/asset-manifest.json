@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.js": "/static/js/main.f54517e2.chunk.js",
+    "main.js.map": "/static/js/main.f54517e2.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/css/2.fa593948.chunk.css": "/static/css/2.fa593948.chunk.css",
+    "static/js/2.9978ff1b.chunk.js": "/static/js/2.9978ff1b.chunk.js",
+    "static/js/2.9978ff1b.chunk.js.map": "/static/js/2.9978ff1b.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.4a16917313e84cc0d16450220a182f4b.js": "/precache-manifest.4a16917313e84cc0d16450220a182f4b.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.fa593948.chunk.css.map": "/static/css/2.fa593948.chunk.css.map",
+    "static/media/emptyCircleWhite.svg": "/static/media/emptyCircleWhite.80510874.svg",
+    "static/media/filledCircleWhite.svg": "/static/media/filledCircleWhite.8ab9540b.svg",
+    "static/media/readmore.svg": "/static/media/readmore.522e0f1d.svg",
+    "static/media/right_arrow.svg": "/static/media/right_arrow.45f31e79.svg",
+    "static/media/whitemasthead.png": "/static/media/whitemasthead.d247d4a9.png",
+    "static/media/x.681a44b1.svg": "/static/media/x.681a44b1.svg"
+  }
+}
