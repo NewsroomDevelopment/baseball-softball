@@ -31,7 +31,7 @@ const TitleCard = ({ info }) => {
     <BigPapa>
       <Title>
         <h1 style={{ color: "#a0c2df ", fontSize: "7vw" }}>
-          Currents
+          {info.title}
         </h1>
       </Title>
       <br />

@@ -2,6 +2,7 @@ import React from "react";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles, Theme } from "./utils/Styles";
 import GlobalData from "./utils/GlobalData";
+import styled from "styled-components";
 
 import Title from "./containers/Title";
 import Section from "./containers/Section";
@@ -16,6 +17,18 @@ const sectionNames = [
   "Acknowledgments",
 ];
 
+// const Triangle = styled.div`
+//   width: 0;
+//   height: 0;
+//   border-style: solid;
+//   border-width: 1000px 0 0 500px;
+//   border-color: transparent transparent transparent #007bff;
+// `;
+
+// const ArticleBlock = styled.div`
+//   display:inline;
+// `;
+
 function App() {
   let sections = {
     Homecoming: {
@@ -25,6 +38,8 @@ function App() {
       // articles: GlobalData.Homecoming
       // ad: "https://commencement2021.s3.amazonaws.com/TelAviv_ad.png"
     },
+    Sports: {},
+    Opinion: {}
   };
 
 
@@ -46,26 +61,8 @@ function App() {
           // img = "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/5AJHA7YTUNEJLOO4XNLCT7NPEE.jpg"
           />
         ))}
-        <Articles
-          sections={[
-            {
-              title: "Sports",
-              articles: GlobalData.Sports,
-            },
-            {
-              title: "Arts and Entertainment",
-              articles: GlobalData["Arts and Entertainment"],
-            },
-            {
-              title: "Opinion",
-              articles: GlobalData.Opinion,
-            },
-            // {
-            //   title: "Photo",
-            //   articles: GlobalData.Photo,
-            // },
-          ]}
-        />
+        {/* <ArticleBlock> */}
+        {/* <Triangle /> */}
         <Acknowledgements />
       </>
     </ThemeProvider>

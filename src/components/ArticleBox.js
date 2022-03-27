@@ -55,20 +55,22 @@ const ArticleInfo = styled.div`
 `
 
 const ArticleBox = ({ id, data }) => {
-    return (<ArticleBoxWrapper id={id}>
-        <ArticleImage>
-            <a href={data.link}>
-                <img src={data.img} alt={data.title} />
-            </a>
-        </ArticleImage>
-        <ArticleInfo>
-            <a href={data.link}>
-                <h2>{data.title}</h2>
-            </a>
-            <h4>By {data.author}</h4>
-            {data.photographer && <h4>Photograph by {data.title}</h4>}
-        </ArticleInfo>
-    </ArticleBoxWrapper>)
+    return (
+        <ArticleBoxWrapper id={id}>
+            <ArticleImage>
+                <a href={data.link}>
+                    <img src={data.img} alt={data.title} />
+                </a>
+            </ArticleImage>
+            <ArticleInfo>
+                <a href={data.link}>
+                    <h2>{data.title}</h2>
+                </a>
+                <h4>By {data.author}</h4>
+                {data.photographer && <h4>Photograph by {data.title}</h4>}
+            </ArticleInfo>
+        </ArticleBoxWrapper>
+    )
 }
 
 export default ArticleBox;
