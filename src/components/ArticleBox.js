@@ -36,17 +36,14 @@ const ArticleBoxWrapper = styled.div`
 `
 
 const ArticleImage = styled.div`
-    @media only screen and (min-width: 992px){
-        margin-left: -125px;
-    }
     & a {
         width: 0; //hide this: we only want the img to be clickable
     }
     & img {
         width: 250px;
-        /* height: 250px; */
+        height: 250px;
         overflow: hidden;
-        /* border-radius: 50%; */
+        border-radius: 50%;
     }
 `
 

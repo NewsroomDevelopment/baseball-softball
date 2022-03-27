@@ -32,7 +32,7 @@ export default class Objects extends React.Component {
       <BigPapa>
         <Title>
           <h1 style={{ color: "#a0c2df ", fontSize: "7vw" }}>
-            {this.props.info.title}
+            Currents
           </h1>
         </Title>
         <br />
@@ -40,11 +40,6 @@ export default class Objects extends React.Component {
           <h3 style={{ fontSize: "17px" }}>{this.props.info.titleDesc}</h3>
         </Desc>
         <br />
-        <Title>
-          <h2 style={{ color: "#a0c2df ", fontSize: "30px" }}>
-            {this.props.info.miniTitle} (To Come)
-          </h2>
-        </Title>
         <br />
 
         {/* <a href="https://www.columbiaspectator.com/the-eye/2021/04/29/if-youre-reading-this-its-late/">

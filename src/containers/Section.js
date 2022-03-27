@@ -5,23 +5,18 @@ import { MobileAndTablet, Desktop } from "react-responsive-simple";
 import ArticleBox from "../components/ArticleBox.js";
 
 const SectionWrapper = styled.div`
-  display: flex;
   justify-content: space-between;
-  background: ${(props) => props.theme.white};
+  background: ${(props) => props.theme.blue};
 `;
 
 const HeaderWrapper = styled.div`
-  display: none;
-  width: 80%;
+  display: flex;
   @media only screen and (min-width: 992px) {
     display: inline-flex;
     align-self: flex-start;
     top: 0;
     align-items: center;
-    color: ${(props) => props.theme.darkgray};
-  }
-  @media only screen and (min-width: 1200px) {
-    width: 80%;
+    color: ${(props) => props.theme.white};
   }
 `;
 
@@ -88,14 +83,10 @@ const ArticlesWrapper = styled.div`
     padding: 4rem 0;
     /* background: ${(props) => props.theme.babyBlue}; */
   }
-  background: ${(props) => props.theme.cream};
+  background: ${(props) => props.theme.blue};
   padding: 0rem 0;
 `;
-const MobilePhotoEssay = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
+
 
 export default class Section extends React.Component {
   render() {
@@ -124,39 +115,9 @@ export default class Section extends React.Component {
       <SectionWrapper id={this.props.name} ref={this.props._ref}>
         <HeaderWrapper>{TitleCards}</HeaderWrapper>
         <ArticlesWrapper>
-          <MobileAndTablet>
-            <HeaderWrapperMobile>
-              {" "}
-              <HeaderMobileTitle>
-                <h1 style={{ fontSize: "1.5em" }}>{this.props.name}</h1>
-              </HeaderMobileTitle>
-              <HeaderMobileBlurb>
-                <h3>{this.props.blurb}</h3>
-              </HeaderMobileBlurb>
-            </HeaderWrapperMobile>
-            <Title>
-              <h2
-                style={{
-                  color: "#a0c2df ",
-                  fontSize: "30px",
-                  marginTop: "0px",
-                }}
-              >
-                Photo Essay (Coming Soon)
-              </h2>
-            </Title>
-            <MobilePhotoEssay>
-              {/* <a href="https://www.columbiaspectator.com/the-eye/2021/04/29/if-youre-reading-this-its-late/">
-                <img
-                  width="350"
-                  alt="essay"
-                  src="https://cloudfront-us-east-1.images.arcpublishing.com/spectator/5AJHA7YTUNEJLOO4XNLCT7NPEE.jpg"
-                ></img>
-              </a> */}
-            </MobilePhotoEssay>
-          </MobileAndTablet>
-          {Articles}
+        {Articles}
         </ArticlesWrapper>
+
       </SectionWrapper>
     );
   }

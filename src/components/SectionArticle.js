@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Wrap = styled.div`
   margin: 1rem;
-  height: 50vh;
+  height: 30vh;
   position: relative;
   display: flex;
   background-size: cover;
