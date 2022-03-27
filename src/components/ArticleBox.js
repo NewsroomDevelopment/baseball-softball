@@ -54,25 +54,21 @@ const ArticleInfo = styled.div`
     justify-content: center;
 `
 
-export default class ArticleBox extends React.Component {
-    // constructor(props){
-    //     super(props);
-    // }
-
-    render(){
-        return(<ArticleBoxWrapper id={this.props.id}>
-            <ArticleImage>
-                <a href={this.props.data.link}>
-                    <img src={this.props.data.img} alt={this.props.data.title}/>
-                </a>
-            </ArticleImage>
-            <ArticleInfo>
-                <a href={this.props.data.link}>
-                    <h2>{this.props.data.title}</h2>
-                </a>
-                <h4>By {this.props.data.author}</h4>
-                {this.props.data.photographer && <h4>Photograph by {this.props.data.title}</h4>}
-            </ArticleInfo>
-        </ArticleBoxWrapper>)
-    }
+const ArticleBox = ({ id, data }) => {
+    return (<ArticleBoxWrapper id={id}>
+        <ArticleImage>
+            <a href={data.link}>
+                <img src={data.img} alt={data.title} />
+            </a>
+        </ArticleImage>
+        <ArticleInfo>
+            <a href={data.link}>
+                <h2>{data.title}</h2>
+            </a>
+            <h4>By {data.author}</h4>
+            {data.photographer && <h4>Photograph by {data.title}</h4>}
+        </ArticleInfo>
+    </ArticleBoxWrapper>)
 }
+
+export default ArticleBox;

@@ -88,37 +88,38 @@ const ArticlesWrapper = styled.div`
 `;
 
 
-export default class Section extends React.Component {
-  render() {
-    var list = [];
-    const Articles = this.props.data.map((el, i) => {
-      var newID = el.title;
-      var id = newID.replace(/ /g, "-");
-      console.log(id);
-      list[i] = {
-        name: el.title,
-        description: el.author,
-      };
-      return <ArticleBox key={i} data={el} id={id} />;
-    });
-    const info = [
-      {
-        title: this.props.name,
-        titleDesc: this.props.blurb,
-        list: list,
-        ad: this.props.ad,
-        miniTitle: this.props.miniTitle,
-      },
-    ];
-    const TitleCards = info.map((info) => <TitleCard info={info} />);
-    return (
-      <SectionWrapper id={this.props.name} ref={this.props._ref}>
-        <HeaderWrapper>{TitleCards}</HeaderWrapper>
-        <ArticlesWrapper>
+const Section = ({ name, _ref, ad, miniTitle, blurb, data }) => {
+  var list = [];
+  const Articles = data.map((el, i) => {
+    var newID = el.title;
+    var id = newID.replace(/ /g, "-");
+    console.log(id);
+    list[i] = {
+      name: el.title,
+      description: el.author,
+    };
+    return <ArticleBox key={i} data={el} id={id} />;
+  });
+  const info = [
+    {
+      title: name,
+      titleDesc: blurb,
+      list: list,
+      ad: ad,
+      miniTitle: miniTitle,
+    },
+  ];
+  const TitleCards = info.map((info) => <TitleCard info={info} />);
+  return (
+    <SectionWrapper id={name} ref={_ref}>
+      <HeaderWrapper>{TitleCards}</HeaderWrapper>
+      <ArticlesWrapper>
         {Articles}
-        </ArticlesWrapper>
+      </ArticlesWrapper>
 
-      </SectionWrapper>
-    );
-  }
+    </SectionWrapper>
+  );
+
 }
+
+export default Section;

@@ -93,26 +93,24 @@ const Dev = styled.div`
   min-width: 10rem;
 `;
 
-class Division extends React.Component {
-  render() {
-    var creditsList = [];
-    var section = this.props.section;
-    if (section != undefined) {
-      creditsList = Credits[section].map((el, i) => (
-        <Person>
-          <Name>{el.name}</Name>
-          <Position>{el.title}</Position>
-        </Person>
-      ));
-      return (
-        <SectionContainer>
-          <Section>{section}</Section>
-          {creditsList}
-        </SectionContainer>
-      );
-    } else {
-      return null;
-    }
+const Division = ({ section }) => {
+  var creditsList = [];
+  var section = section;
+  if (section != undefined) {
+    creditsList = Credits[section].map((el, i) => (
+      <Person>
+        <Name>{el.name}</Name>
+        <Position>{el.title}</Position>
+      </Person>
+    ));
+    return (
+      <SectionContainer>
+        <Section>{section}</Section>
+        {creditsList}
+      </SectionContainer>
+    );
+  } else {
+    return null;
   }
 }
 
@@ -171,83 +169,84 @@ const dev_creds = [
   },
 ];
 
-export default class Acknowledgements extends React.Component {
-  render() {
-    var panel1 = ["Corporate Board", "Spectrum", "A&E"];
-    var panel2 = ["Sports", "Engineering", "Photo", ];
-    var panel3 = ["Opinion", "Copy"];
+const Acknowledgments = () => {
+  var panel1 = ["Corporate Board", "Spectrum", "A&E"];
+  var panel2 = ["Sports", "Engineering", "Photo",];
+  var panel3 = ["Opinion", "Copy"];
 
-    return (
-      <Wrapper id="Acknowledgments">
-        <Title>Acknowledgments</Title>
-        <Desktop>
-          <PanelContainer>
-            <Panel>
-              {panel1.map((element, i) => (
-                <Division key={i} section={element} />
-              ))}
-            </Panel>
-            <Panel>
-              {panel2.map((element, i) => (
-                <Division key={i + 100} section={element} />
-              ))}
-            </Panel>
-            <Panel>
-              {panel3.map((element, i) => (
-                <Division key={i + 200} section={element} />
-              ))}
-            </Panel>
-            {/* <Panel>
+  return (
+    <Wrapper id="Acknowledgments">
+      <Title>Acknowledgments</Title>
+      <Desktop>
+        <PanelContainer>
+          <Panel>
+            {panel1.map((element, i) => (
+              <Division key={i} section={element} />
+            ))}
+          </Panel>
+          <Panel>
+            {panel2.map((element, i) => (
+              <Division key={i + 100} section={element} />
+            ))}
+          </Panel>
+          <Panel>
+            {panel3.map((element, i) => (
+              <Division key={i + 200} section={element} />
+            ))}
+          </Panel>
+          {/* <Panel>
               {panel4.map((element, i) => (
                 <Division key={i + 300} section={element} />
               ))}
             </Panel> */}
-          </PanelContainer>
-        </Desktop>
-        <MobileAndTablet>
-          <PanelContainer>
-            <Panel>
-              {panel1
-                .concat(panel2)
-                .concat(panel3)
-                // .concat(panel4)
-                .map((element, x) => (
-                  <Division section={element} />
-                ))}
-            </Panel>
-          </PanelContainer>
-        </MobileAndTablet>
-        <Title>Design and Development</Title>
-        <DevWrap>
-          <div>
-            {dev_creds.slice(0, 4).map((cred) => {
-              return (
-                <Dev>
-                  <Name>{cred.name}</Name> <Position>{cred.title}</Position>
-                </Dev>
-              );
-            })}
-          </div>
-          <div>
-            {dev_creds.slice(4, 8).map((cred) => {
-              return (
-                <Dev>
-                  <Name>{cred.name}</Name> <Position>{cred.title}</Position>
-                </Dev>
-              );
-            })}
-          </div>
-          <div>
-            {dev_creds.slice(8, 12).map((cred) => {
-              return (
-                <Dev>
-                  <Name>{cred.name}</Name> <Position>{cred.title}</Position>
-                </Dev>
-              );
-            })}
-          </div>
-        </DevWrap>
-      </Wrapper>
-    );
-  }
+        </PanelContainer>
+      </Desktop>
+      <MobileAndTablet>
+        <PanelContainer>
+          <Panel>
+            {panel1
+              .concat(panel2)
+              .concat(panel3)
+              // .concat(panel4)
+              .map((element, x) => (
+                <Division section={element} />
+              ))}
+          </Panel>
+        </PanelContainer>
+      </MobileAndTablet>
+      <Title>Design and Development</Title>
+      <DevWrap>
+        <div>
+          {dev_creds.slice(0, 4).map((cred) => {
+            return (
+              <Dev>
+                <Name>{cred.name}</Name> <Position>{cred.title}</Position>
+              </Dev>
+            );
+          })}
+        </div>
+        <div>
+          {dev_creds.slice(4, 8).map((cred) => {
+            return (
+              <Dev>
+                <Name>{cred.name}</Name> <Position>{cred.title}</Position>
+              </Dev>
+            );
+          })}
+        </div>
+        <div>
+          {dev_creds.slice(8, 12).map((cred) => {
+            return (
+              <Dev>
+                <Name>{cred.name}</Name> <Position>{cred.title}</Position>
+              </Dev>
+            );
+          })}
+        </div>
+      </DevWrap>
+    </Wrapper>
+  );
 }
+
+
+export default Acknowledgments;

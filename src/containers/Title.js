@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 import ImgSrc_mobile from '../images/background.png';
 import ImgSrc_desktop from '../images/background1.png';
-import {Desktop, MobileAndTablet} from 'react-responsive-simple'
+import { Desktop, MobileAndTablet } from 'react-responsive-simple'
 
 const TitleWrapper = styled.div`
     overflow: hidden;
@@ -47,7 +47,7 @@ const TitleButton = styled.a`
     }
 `
 
-const SectionContainer=styled.div`
+const SectionContainer = styled.div`
     box-sizing: border-box;
     border-top: 5px solid white;
     height: 100%;
@@ -66,7 +66,7 @@ const SectionContainer=styled.div`
     }
 `;
 
-const CommencementHeader=styled.div`
+const CommencementHeader = styled.div`
     color:white;
     text-transform: uppercase;
     margin-top: 6rem;
@@ -110,44 +110,43 @@ const Logo = styled.img`
     }
 `
 
-export default class Title extends React.Component {
-    
-    render(){
-        //onClick={()=>{this.props.navigateTo(i)}} 
-        const SectionButtons = this.props.sections.map((el, i)=>(
-            <TitleButton href={`/#${el === "A&E" ? "Arts and Entertainment" : el}`} key={i}><h2>{el}</h2><div/></TitleButton> 
-        ))
-        return(
-            <div>
-                <Desktop>
-                    <TitleWrapper img={ImgSrc_desktop}>
-                        <CommencementHeader><h1>Homecoming 2021</h1></CommencementHeader>
-                        <SectionContainer>
-                            {SectionButtons}
-                        </SectionContainer>
-                        
-                        <a href="https://www.columbiaspectator.com/">
-                            <Logo src="https://s3.amazonaws.com/year-in-review-assets/whitemasthead.png" />
-                        </a>
-                        {/* <Logo href="https://www.columbiaspectator.com/"/> */}
-                        
-                    </TitleWrapper>
-                </Desktop>
-            <MobileAndTablet>
-                <TitleWrapper img={ImgSrc_mobile}>
-                    <CommencementHeader><h1 style={{'line-height': '1.5em'}}>Homecoming 2021</h1></CommencementHeader>
+const Title = ({ sections }) => {
+
+    //onClick={()=>{navigateTo(i)}} 
+    const SectionButtons = sections.map((el, i) => (
+        <TitleButton href={`/#${el === "A&E" ? "Arts and Entertainment" : el}`} key={i}><h2>{el}</h2><div /></TitleButton>
+    ))
+    return (
+        <div>
+            <Desktop>
+                <TitleWrapper img={ImgSrc_desktop}>
+                    <CommencementHeader><h1>Homecoming 2021</h1></CommencementHeader>
                     <SectionContainer>
                         {SectionButtons}
                     </SectionContainer>
-                    
+
                     <a href="https://www.columbiaspectator.com/">
                         <Logo src="https://s3.amazonaws.com/year-in-review-assets/whitemasthead.png" />
                     </a>
                     {/* <Logo href="https://www.columbiaspectator.com/"/> */}
-                    
+
+                </TitleWrapper>
+            </Desktop>
+            <MobileAndTablet>
+                <TitleWrapper img={ImgSrc_mobile}>
+                    <CommencementHeader><h1 style={{ 'line-height': '1.5em' }}>Homecoming 2021</h1></CommencementHeader>
+                    <SectionContainer>
+                        {SectionButtons}
+                    </SectionContainer>
+
+                    <a href="https://www.columbiaspectator.com/">
+                        <Logo src="https://s3.amazonaws.com/year-in-review-assets/whitemasthead.png" />
+                    </a>
+                    {/* <Logo href="https://www.columbiaspectator.com/"/> */}
+
                 </TitleWrapper>
             </MobileAndTablet>
-            </div>
-        )
-    }
+        </div>
+    )
 }
+export default Title;
