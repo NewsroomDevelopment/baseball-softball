@@ -3,6 +3,8 @@ import styled from "styled-components";
 import TitleCard from "./TitleCard.js";
 import { MobileAndTablet, Desktop } from "react-responsive-simple";
 import ArticleBox from "../components/ArticleBox.js";
+import SpotlightBlock from "../components/SpotlightBlock";
+
 
 const SectionWrapper = styled.div`
   justify-content: space-between;
@@ -42,11 +44,11 @@ const Section = ({ name, _ref, ad, miniTitle, blurb, data }) => {
       name: el.title,
       description: el.author,
     };
-    //  if (name != "Spotlights")
-    //    return <ArticleBox key={i} data={el} id={id} />;
-    //  else 
-    //    return <SpotlightBox key={i} data={el} id={id} />;
-    return <ArticleBox key={i} data={el} id={id} />;
+     if (name != "Spotlights")
+       return <ArticleBox key={i} data={el} id={id} />;
+     else 
+       return <SpotlightBlock key={i} data={el} id={id} />;
+    //return <ArticleBox key={i} data={el} id={id} />;
   });
 
   const info = [

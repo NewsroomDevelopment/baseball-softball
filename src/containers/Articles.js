@@ -27,7 +27,6 @@ const Section = styled.div`
 `;
 
 
-
 const Articles = ({ sections }) => {
     return (
         <Wrap>

@@ -5,7 +5,7 @@ import { MobileAndTablet, Desktop } from "react-responsive-simple";
 
 const Wrapper = styled.div`
   background: ${(props) => props.theme.babyBlue};
-  font-family: brandon-grotesque;
+  font-family: Bangers;
   padding: 4rem 2rem;
   height: auto;
   @media only screen and (min-width: 1200px) {
@@ -13,10 +13,19 @@ const Wrapper = styled.div`
   }
 `;
 
+const BoxDiv = styled.div`
+    margin: 5%;
+    padding: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
+    border: 1px solid #072465;
+    box-sizing: border-box;
+`;
+
 const Title = styled.div`
   text-transform: uppercase;
   font-size: 1.6em;
-  color: #ffffff;
+  color: #072465;
   font-weight: 900;
   margin-bottom: 2rem;
   @media only screen and (min-width: 1200px) {
@@ -43,18 +52,18 @@ const PanelContainer = styled.div`
 
 const Section = styled.div`
   font-size: 1.13rem;
-  color: #ffffff;
+  color: #072465;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
 `;
 
 const Name = styled.div`
   font-size: 0.9rem;
-  color: #ffffff;
+  color:#072465;
   font-weight: bold;
   font-style: italic;
   white-space: pre;
-  font-family: filson-pro;
+  font-family: Bangers;
   ::after {
     content: ", ";
     font-style: normal;
@@ -63,7 +72,7 @@ const Name = styled.div`
 
 const Position = styled.div`
   font-size: 0.8rem;
-  color: #ffffff;
+  color: #072465;
   display: flex;
   align-items: flex-end;
   white-space: nowrap;
@@ -176,7 +185,8 @@ const Acknowledgments = () => {
 
   return (
     <Wrapper id="Acknowledgments">
-      <Title>Acknowledgments</Title>
+      <BoxDiv>
+      <Title>Thanks</Title>
       <Desktop>
         <PanelContainer>
           <Panel>
@@ -244,6 +254,7 @@ const Acknowledgments = () => {
           })}
         </div>
       </DevWrap>
+      </BoxDiv>
     </Wrapper>
   );
 }

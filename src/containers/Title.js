@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components'
 import ImgSrc_mobile from '../images/background.png';
 import ImgSrc_desktop from '../images/background1.png';
-import { Desktop, MobileAndTablet } from 'react-responsive-simple'
+import { Desktop, MobileAndTablet } from 'react-responsive-simple';
+import LetterSec from '../components/LetterEditor';
 
 const TitleWrapper = styled.div`
     overflow: hidden;
@@ -16,8 +17,7 @@ const TitleWrapper = styled.div`
 `;
 
 const TitleButton = styled.a`
-    
-    color: ${props => props.theme.white};
+    color: white;
     text-transform: uppercase;
     cursor: pointer;
     display: flex;
@@ -120,7 +120,7 @@ const Title = ({ sections }) => {
         <div>
             <Desktop>
                 <TitleWrapper img={ImgSrc_desktop}>
-                    <CommencementHeader><h1>Homecoming 2021</h1></CommencementHeader>
+                    <CommencementHeader><h1>Baseball & Softball</h1></CommencementHeader>
                     <SectionContainer>
                         {SectionButtons}
                     </SectionContainer>
@@ -131,10 +131,11 @@ const Title = ({ sections }) => {
                     {/* <Logo href="https://www.columbiaspectator.com/"/> */}
 
                 </TitleWrapper>
+                <LetterSec />
             </Desktop>
             <MobileAndTablet>
                 <TitleWrapper img={ImgSrc_mobile}>
-                    <CommencementHeader><h1 style={{ 'line-height': '1.5em' }}>Homecoming 2021</h1></CommencementHeader>
+                    <CommencementHeader><h1 style={{ 'line-height': '1.5em' }}>Baseball & Softball</h1></CommencementHeader>
                     <SectionContainer>
                         {SectionButtons}
                     </SectionContainer>
@@ -145,6 +146,7 @@ const Title = ({ sections }) => {
                     {/* <Logo href="https://www.columbiaspectator.com/"/> */}
 
                 </TitleWrapper>
+                <LetterSec />
             </MobileAndTablet>
         </div>
     )

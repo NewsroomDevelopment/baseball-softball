@@ -1,5 +1,5 @@
 const GlobalData = {
-  Homecoming: [
+  Currents: [
     {
       title:
         "Grabbing a bite during Homecoming weekend on a Columbia meal plan",
@@ -19,21 +19,15 @@ const GlobalData = {
       link: "https://www.columbiaspectator.com/spectrum/2019/10/09/how-to-win-homecoming/",
       author: "Lina Bennani Karim",
       img: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/32HGINRIJVFFZMHR45EO7IFFJM.jpg",
-    },
-    {
-      title: "Pregame Playlist: Getting pumped for Homecoming weekend",
-      link: "https://www.columbiaspectator.com/spectrum/2016/10/19/pregame-playlist-getting-pumped-homecoming-weekend/",
-      author: "Veronica Grace Taleon",
-      img: "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/6IO72NNVIREZ3JZIDHWXPUIYPY",
-    },
+    }
   ],
-  "Arts and Entertainment": [
+  Spotlights: [
     {
       title:
         "This Homecoming, Columbia’s dance team will perform on the bleachers, not the field",
       link: "https://www.columbiaspectator.com/arts-and-entertainment/2021/10/08/this-homecoming-columbias-dance-team-will-perform-on-the-bleachers-not-the-field/",
       author: "Emma Danon",
-      img: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/2DYHDEZWCFFCLFP75VEYW32VAE.jpg",
+      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/800px-Instagram_logo_2016.svg.png",
     },
     {
       title:
@@ -69,7 +63,7 @@ const GlobalData = {
       img: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/SQJ3AKINJVAODDD5GOE7UABUDI.jpg",
     },
   ],
-  Sports: [
+  Historic: [
     {
       title: "Columbia gunning for 400th win in Homecoming clash against Penn",
       link: "https://www.columbiaspectator.com/sports/2021/10/13/columbia-gunning-for-400th-win-in-homecoming-clash-against-penn/",
@@ -121,26 +115,6 @@ const GlobalData = {
       link: "https://www.columbiaspectator.com/sports/2021/09/28/he-didnt-want-to-be-promised-anything-joe-greens-path-to-columbias-starting-quarterback-role/",
       author: "Harris Walker and Elizabeth Karpen",
       img: "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/JV3NGZQ75ZADBLVIA6PW65WIRU.jpg",
-    },
-  ],
-  Opinion: [
-    {
-      title: "Columbia does not deserve alumni donations",
-      link: "https://www.columbiaspectator.com/opinion/2021/04/01/columbia-does-not-deserve-alumni-donations/",
-      author: "Joel Berg",
-      img: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/VY5OFVDG5JAN5NCPLBYPGJEGWU.jpg",
-    },
-    {
-      title: "Columbia State University for a weekend",
-      link: "https://www.columbiaspectator.com/opinion/2015/10/22/columbia-state-university-weekend/",
-      author: "Angela Beam",
-      img: "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/JJTYHDO5Q5H4HBDIB4QP4WK4TQ",
-    },
-    {
-      title: "The stories that matter",
-      link: "https://www.columbiaspectator.com/opinion/2015/10/15/stories-matter/",
-      author: "Colin Valentini",
-      img: "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/RZU7SDXT45BKRMCNLMPOKJFTVE",
     },
   ]
   // Photo: [

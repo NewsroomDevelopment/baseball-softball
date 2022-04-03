@@ -12,8 +12,13 @@ const BigPapa = styled.div`
 `;
 const Title = styled.div`
   text-transform: capitalize;
-  font-size: 3.5em;
   font-family: brandon-grotesque;
+  & h1 {
+    font-size: 7rem;
+    @media (max-width: 768px) {
+      font-size: 4rem;
+    }
+  }
 `;
 
 const Desc = styled.div`
@@ -30,7 +35,7 @@ const TitleCard = ({ info }) => {
   return (
     <BigPapa>
       <Title>
-        <h1 style={{ color: "#a0c2df ", fontSize: "7vw" }}>
+        <h1 style={{ color: "white "}}>
           {info.title}
         </h1>
       </Title>

@@ -15,7 +15,6 @@ const ArticleBoxWrapper = styled.div`
         align-items: unset;
         text-align: left;
         color: ${props => props.theme.darkgray};
-        /* color: ${props => props.theme.cream}; */
     }
     & div:first-of-type{
         position: relative;
@@ -40,18 +39,24 @@ const ArticleImage = styled.div`
         width: 0; //hide this: we only want the img to be clickable
     }
     & img {
-        width: 250px;
-        height: 250px;
+        width: 15vw;
+        height: 15vw;
         overflow: hidden;
         border-radius: 50%;
     }
 `
 
 const ArticleInfo = styled.div`
-    width: 60%;
+    width: 70%;
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
+    & h2 {
+        font-size: 2rem;
+    }
+    & h4 {
+        font-size 1rem;
+    }
 `
 
 const ArticleBox = ({ id, data }) => {

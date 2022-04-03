@@ -3,6 +3,9 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyles = createGlobalStyle`
     @import url("https://use.typekit.net/oun7bhh.css");
     @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,500;1,100;1,300;1,400;1,700&display=swap');
+    body {
+        background-color: #BFD8E9;
+    }
     h1 {
         font-family: Bangers;
         font-weight: 700;

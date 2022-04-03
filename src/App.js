@@ -10,10 +10,9 @@ import Acknowledgements from "./components/Acknowledgements";
 import Articles from "./containers/Articles";
 
 const sectionNames = [
-  "Homecoming",
-  "Sports",
-  "A&E",
-  "Opinion",
+  "Currents",
+  "Spotlights",
+  "Historic",
   "Acknowledgments",
 ];
 
@@ -31,15 +30,9 @@ const sectionNames = [
 
 function App() {
   let sections = {
-    Homecoming: {
-      // link: "https://www.columbiaspectator.com/the-eye/2021/04/29/if-youre-reading-this-its-late/",
-      // img: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/5AJHA7YTUNEJLOO4XNLCT7NPEE.jpg"
-
-      // articles: GlobalData.Homecoming
-      // ad: "https://commencement2021.s3.amazonaws.com/TelAviv_ad.png"
-    },
-    Sports: {},
-    Opinion: {}
+    Currents: {},
+    Spotlights: {},
+    Historic: {}
   };
 
 
