@@ -90,32 +90,7 @@ const GlobalData = {
       link: "https://www.columbiaspectator.com/sports/2021/09/22/columbia-football-is-back-these-are-the-players-to-watch-this-season/",
       author: "Matthew Kim",
       img: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/3XQQKHA3TBDS5ATFGCVRWZMHOI.jpg",
-    },
-    {
-      title: "How to do Homecoming if you're actually excited about it",
-      link: "https://www.columbiaspectator.com/spectrum/2016/10/20/your-homecoming-weekend-itinerary-whats-wheres-and-hows/",
-      author: "Stephanie Sloves",
-      img: "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/HFQ26I4J45DR5HHTJLO5WLW4IU",
-    },
-    {
-      title: "Amid challenges, assistant coaches drive every athlete forward",
-      link: "https://www.columbiaspectator.com/sports/2020/10/27/amid-challenges-assistant-coaches-drive-every-athlete-forward/",
-      author: "Matthew Kim",
-      img: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/XD2TFZY2CRGS5N5Q3A5JS6PQYY.jpg",
-    },
-    {
-      title: "Remembering Tyler Ugolyn, CC ’01, 20 years later",
-      link: "https://www.columbiaspectator.com/main/2021/09/14/remembering-tyler-ugolyn-cc-01-20-years-later/",
-      author: "Miles Schachner",
-      img: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/ADQXAT5DNBBQBKKNK3SCEKV4WA.jpg",
-    },
-    {
-      title:
-        "‘He didn’t want to be promised anything’: Joe Green’s path to Columbia’s starting quarterback role",
-      link: "https://www.columbiaspectator.com/sports/2021/09/28/he-didnt-want-to-be-promised-anything-joe-greens-path-to-columbias-starting-quarterback-role/",
-      author: "Harris Walker and Elizabeth Karpen",
-      img: "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/JV3NGZQ75ZADBLVIA6PW65WIRU.jpg",
-    },
+    }
   ]
   // Photo: [
   //   {
