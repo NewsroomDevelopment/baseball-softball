@@ -179,9 +179,9 @@ const dev_creds = [
 ];
 
 const Acknowledgments = () => {
-  var panel1 = ["Corporate Board", "Spectrum", "A&E"];
-  var panel2 = ["Sports", "Photo", "Illustrations"];
-  var panel3 = ["Copy", "Newsroom Development", "Product"];
+  var panel1 = ["Sports", "Photo", "Illustrations"];
+  var panel2 = ["Copy", "Newsroom Development"];
+  var panel3 = ["Product"];
 
   return (
     <Wrapper id="Acknowledgments">

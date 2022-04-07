@@ -52,14 +52,14 @@ const LetterEditor = () => {
             <BoxDiv>
                 <Title>LETTER FROM THE EDITOR</Title>
                 <Body>
-                    <p>Dear readers, </p>
-                    <p>For almost two years, no basketball games were played in Levien Gymnasium, as the ongoing pandemic pushed athletics to the sidelines. The Ivy League’s athletes and fans were hit especially hard—while the Power Five conferences played throughout the pandemic, the Ancient Eight canceled its 2020-2021 season completely, leaving athletes stranded at home, watching their peers compete as they itched to get back on the court.
+                    <p></p>
+                    <p>As a long, dark winter abates and we are greeted with spring, another season of sports begins. Like many of the Columbia traditions that were lost to the COVID-19 pandemic, the baseball and softball teams have been unable to don Columbia Blue for almost two years. This year, the Lions have a chance to put on their cleats and take the diamond again.
                     </p>
-                    <p>While the pandemic continues to remain a threat, Columbia basketball is officially back. With this issue, we hope to give readers a snapshot of the state of both the men and women’s programs in their returning seasons.
+                    <p>Both the baseball and softball teams have embarked on their 2022 seasons on a hopeful note: Each team was selected to finish in the top two seeds of the Ivy League. While the baseball team carries an impressive pedigree as the best in the conference over the last decade, the softball team has risen to prominence over the past few seasons. 
                     </p>
-                    <p>From the story of how a first-year guard on the women’s team was recruited from Australia to a look at what the year off was like for the men’s basketball sophomore class, our staff was thrilled to return to basketball coverage this year. As the women’s squad sets its sights on the Ivy League title while the men’s team hopes to rebound from a 1-13 season, these are the stories that define the state of Columbia basketball.
+                    <p>In this issue, our writers chronicle the stories that define the past and present of Columbia baseball and softball. Read about the experiences that have shaped the program-shifting leadership of softball head coach Jen Teague, the advanced statistics behind the baseball team’s performances, and the conference outlook for each team. On the historical side, we dive into Hall of Famer Lou Gehrig’s time at Columbia and the transition of the softball team from a club sport to a varsity stalwart. Lastly, read the case for baseball’s return to relevance among young people.
                     </p>
-                    <p>Thank you very much for reading!</p>
+                    <p>Thank you for reading,</p>
                     <p>Miles Schachner, Sports Editor</p>
                 </Body>
             </BoxDiv>
