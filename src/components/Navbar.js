@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
-import {Desktop, MobileAndTablet} from 'react-responsive-simple'
+import { Desktop, MobileAndTablet } from 'react-responsive-simple'
 
 
 const NavbarWrapper = styled.div`
@@ -57,7 +57,7 @@ const NavItem = styled.div`
     }
 `
 
-const CrownLogo =styled.a`
+const CrownLogo = styled.a`
     position: relative;
     background-image: url("https://s3.amazonaws.com/year-in-review-assets/spectator-logo.png");
     background-size: contain;
@@ -74,29 +74,29 @@ const CrownLogo =styled.a`
     }
 `
 
-export default class Navbar extends React.Component {
-    render(){
-        const NavItems = this.props.sections.map((el, i)=>(
-            <NavItem key={i} active={this.props.active === i} onClick={()=>{this.props.navigateTo(i)}}>
-                <h3>{el}</h3>
-            </NavItem>
-        ))
-        // Because css only supports writing downwards and we want to write upwards, we
-        // are rotating the whole thing by 180deg and reversing the items
-        return (
-            <NavbarWrapper>
-                <CrownLogo href= "https://www.columbiaspectator.com/"/>
-                <Desktop>
-                    <ItemContainer>
-                        {[...NavItems].reverse()}
-                    </ItemContainer>
-                </Desktop>
-                <MobileAndTablet>
-                    <ItemContainer>
-                        {NavItems}
-                    </ItemContainer>
-                </MobileAndTablet>
-            </NavbarWrapper>
-        )
-    }
+const Navbar = ({ active, sections }) => {
+    const NavItems = sections.map((el, i) => (
+        <NavItem key={i} active={active === i}>
+            <h3>{el}</h3>
+        </NavItem>
+    ))
+    // Because css only supports writing downwards and we want to write upwards, we
+    // are rotating the whole thing by 180deg and reversing the items
+    return (
+        <NavbarWrapper>
+            <CrownLogo href="https://www.columbiaspectator.com/" />
+            <Desktop>
+                <ItemContainer>
+                    {[...NavItems].reverse()}
+                </ItemContainer>
+            </Desktop>
+            <MobileAndTablet>
+                <ItemContainer>
+                    {NavItems}
+                </ItemContainer>
+            </MobileAndTablet>
+        </NavbarWrapper>
+    )
 }
+
+export default Navbar;

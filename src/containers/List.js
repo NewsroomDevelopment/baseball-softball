@@ -25,18 +25,18 @@ const Desc = styled.div`
     }
 `
 
-export default class List extends React.Component {
-	render() {
-        var newID = this.props.list.name;
-        var id = newID.replace(/ /g, "-");
-        id = "#" + id;
-		return (
-            <a href={id}>
-			<BigPapa>
-                <Name><h1>{this.props.list.name}</h1></Name>
-                <Desc><h3>{this.props.list.description}</h3></Desc>
-            </BigPapa>	
-            </a>
-		)
-	}
+const List = ({ list }) => {
+    var newID = list.name;
+    var id = newID.replace(/ /g, "-");
+    id = "#" + id;
+    return (
+        <a href={id}>
+            <BigPapa>
+                <Name><h1>{list.name}</h1></Name>
+                <Desc><h3>{list.description}</h3></Desc>
+            </BigPapa>
+        </a>
+    )
 }
+
+export default List;

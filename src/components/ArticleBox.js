@@ -15,7 +15,6 @@ const ArticleBoxWrapper = styled.div`
         align-items: unset;
         text-align: left;
         color: ${props => props.theme.darkgray};
-        /* color: ${props => props.theme.cream}; */
     }
     & div:first-of-type{
         position: relative;
@@ -36,46 +35,47 @@ const ArticleBoxWrapper = styled.div`
 `
 
 const ArticleImage = styled.div`
-    @media only screen and (min-width: 992px){
-        margin-left: -125px;
-    }
     & a {
         width: 0; //hide this: we only want the img to be clickable
     }
     & img {
-        width: 250px;
-        /* height: 250px; */
+        width: 15vw;
+        height: 15vw;
         overflow: hidden;
-        /* border-radius: 50%; */
+        border-radius: 50%;
     }
 `
 
 const ArticleInfo = styled.div`
-    width: 60%;
+    width: 70%;
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
+    & h2 {
+        font-size: 2rem;
+    }
+    & h4 {
+        font-size 1rem;
+    }
 `
 
-export default class ArticleBox extends React.Component {
-    // constructor(props){
-    //     super(props);
-    // }
-
-    render(){
-        return(<ArticleBoxWrapper id={this.props.id}>
+const ArticleBox = ({ id, data }) => {
+    return (
+        <ArticleBoxWrapper id={id}>
             <ArticleImage>
-                <a href={this.props.data.link}>
-                    <img src={this.props.data.img} alt={this.props.data.title}/>
+                <a href={data.link}>
+                    <img src={data.img} alt={data.title} />
                 </a>
             </ArticleImage>
             <ArticleInfo>
-                <a href={this.props.data.link}>
-                    <h2>{this.props.data.title}</h2>
+                <a href={data.link}>
+                    <h2>{data.title}</h2>
                 </a>
-                <h4>By {this.props.data.author}</h4>
-                {this.props.data.photographer && <h4>Photograph by {this.props.data.title}</h4>}
+                <h4>By {data.author}</h4>
+                {data.photographer && <h4>Photograph by {data.title}</h4>}
             </ArticleInfo>
-        </ArticleBoxWrapper>)
-    }
+        </ArticleBoxWrapper>
+    )
 }
+
+export default ArticleBox;

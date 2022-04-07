@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Car from '../components/Car'
 
 const Wrap = styled.div`
     background-color: #69B3E799;
@@ -28,20 +27,17 @@ const Section = styled.div`
 `;
 
 
-
-export default class Articles extends React.Component {
-    render() {
-        return (
-            <Wrap>
-                {
-                    this.props.sections.map(section => (
-                        <Section id={section.title}>
-                            <Title>{section.title}</Title>
-                            <Car title={section.title}/>
-                        </Section>
-                    ))
-                }
-            </Wrap>
-        )
-    }
+const Articles = ({ sections }) => {
+    return (
+        <Wrap>
+            {
+                sections.map(section => (
+                    <Section id={section.title}>
+                        <Title>{section.title}</Title>
+                    </Section>
+                ))
+            }
+        </Wrap>
+    )
 }
+export default Articles;

@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components'
 import ImgSrc_mobile from '../images/background.png';
 import ImgSrc_desktop from '../images/background1.png';
-import { Desktop, MobileAndTablet } from 'react-responsive-simple'
+import { Desktop, MobileAndTablet } from 'react-responsive-simple';
+import LetterSec from '../components/LetterEditor';
 
 const TitleWrapper = styled.div`
     // overflow: hidden;
@@ -16,8 +17,7 @@ const TitleWrapper = styled.div`
 `;
 
 const TitleButton = styled.a`
-    
-    color: ${props => props.theme.white};
+    color: white;
     text-transform: uppercase;
     cursor: pointer;
     display: flex;
@@ -111,6 +111,7 @@ const Logo = styled.img`
     }
 `
 
+<<<<<<< HEAD
 export default class Title extends React.Component {
 
     render() {
@@ -146,3 +147,47 @@ export default class Title extends React.Component {
         )
     }
 }
+=======
+const Title = ({ sections }) => {
+
+    //onClick={()=>{navigateTo(i)}} 
+    const SectionButtons = sections.map((el, i) => (
+        <TitleButton href={`/#${el === "A&E" ? "Arts and Entertainment" : el}`} key={i}><h2>{el}</h2><div /></TitleButton>
+    ))
+    return (
+        <div>
+            <Desktop>
+                <TitleWrapper img={ImgSrc_desktop}>
+                    <CommencementHeader><h1>Baseball & Softball</h1></CommencementHeader>
+                    <SectionContainer>
+                        {SectionButtons}
+                    </SectionContainer>
+
+                    <a href="https://www.columbiaspectator.com/">
+                        <Logo src="https://s3.amazonaws.com/year-in-review-assets/whitemasthead.png" />
+                    </a>
+                    {/* <Logo href="https://www.columbiaspectator.com/"/> */}
+
+                </TitleWrapper>
+                <LetterSec />
+            </Desktop>
+            <MobileAndTablet>
+                <TitleWrapper img={ImgSrc_mobile}>
+                    <CommencementHeader><h1 style={{ 'line-height': '1.5em' }}>Baseball & Softball</h1></CommencementHeader>
+                    <SectionContainer>
+                        {SectionButtons}
+                    </SectionContainer>
+
+                    <a href="https://www.columbiaspectator.com/">
+                        <Logo src="https://s3.amazonaws.com/year-in-review-assets/whitemasthead.png" />
+                    </a>
+                    {/* <Logo href="https://www.columbiaspectator.com/"/> */}
+
+                </TitleWrapper>
+                <LetterSec />
+            </MobileAndTablet>
+        </div>
+    )
+}
+export default Title;
+>>>>>>> 4fb72dd8af5ec2292f5835048067db8f4bc3bec4
