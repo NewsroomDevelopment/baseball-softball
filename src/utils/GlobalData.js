@@ -1,104 +1,61 @@
 const GlobalData = {
-  Currents: [
+  "Baseball": [
     {
-      title:
-        "Grabbing a bite during Homecoming weekend on a Columbia meal plan",
-      link: "https://www.columbiaspectator.com/spectrum/2021/10/10/grabbing-a-bite-during-homecoming-weekend-on-a-columbia-meal-plan/",
-      author: "Aliza Rabinovitz",
-      img: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/VTFZPSTLBNDYBB43ULBYHMTIBU.jpg",
+      title: "Tabbed as an Ivy League favorite, baseball sets sights on another title",
+      link: "https://www.columbiaspectator.com/sports/2022/03/03/tabbed-as-an-ivy-league-favorite-baseball-sets-sights-on-another-title/",
+      author: "Miles Schachner",
+      img: ""
     },
     {
-      title:
-        "Smells like school spirit: A brief refresher about Homecoming at Columbia",
-      link: "https://www.columbiaspectator.com/spectrum/2021/10/11/smells-like-school-spirit-a-brief-refresher-about-homecoming-at-columbia/",
-      author: "Haley Long",
-      img: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/4ESJ3IXVLZAOXNIUERLL4QO43I.png",
+      title: "Columbia Lou: A look back at Lou Gehrig’s enduring legacy",
+      link: "",
+      author: "Caleb Dye and Owen Tesoro",
+      img: ""
     },
     {
-      title: "How to “win” Homecoming",
-      link: "https://www.columbiaspectator.com/spectrum/2019/10/09/how-to-win-homecoming/",
-      author: "Lina Bennani Karim",
-      img: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/32HGINRIJVFFZMHR45EO7IFFJM.jpg",
+      title: "The numbers behind the numbers: A sabermetric preview of Ivy League baseball",
+      link: "https://www.columbiaspectator.com/sports/2022/04/01/the-numbers-behind-the-numbers-a-sabermetric-preview-of-ivy-league-baseball/",
+      author: "Andrew Park, Robert Gao, Brian Lee",
+      img: ""
+    },
+    {
+      title: "The Case for Baseball",
+      link: "https://www.columbiaspectator.com/the-eye/2022/04/05/the-case-for-baseball/",
+      author: "Stephen Dames",
+      img: ""
+    },
+    {
+      title: "A look at Ivy League baseball so far",
+      link: "https://www.columbiaspectator.com/sports/2022/03/31/a-look-at-ivy-league-baseball-so-far/",
+      author: "Takashi Williams",
+      img: ""
     }
-  ],
-  Spotlights: [
+  ], 
+  "Softball": [
     {
-      title:
-        "This Homecoming, Columbia’s dance team will perform on the bleachers, not the field",
-      link: "https://www.columbiaspectator.com/arts-and-entertainment/2021/10/08/this-homecoming-columbias-dance-team-will-perform-on-the-bleachers-not-the-field/",
-      author: "Emma Danon",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/800px-Instagram_logo_2016.svg.png",
+      title: "You’ve got to have the courage’: Looking for historic firsts, softball aims high",
+      link: "https://www.columbiaspectator.com/sports/2022/02/18/youve-got-to-have-the-courage-looking-for-historic-firsts-softball-aims-high/",
+      author: "Matthew Rowell",
+      img: ""
     },
     {
-      title:
-        "‘On the Road’ to fame: Jack Kerouac's short-lived Columbia football career",
-      link: "https://www.columbiaspectator.com/arts-and-entertainment/2021/10/12/on-the-road-to-fame-jack-kerouacs-short-lived-columbia-football-career/",
-      author: "Holly Qu",
-      img: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/ASBPFEL66VETJCW3SH2727IMDI.jpg",
+      title: "‘I want to get it right’: Softball head coach Jen Teague uses her experiences to frame her leadership",
+      link: "https://www.columbiaspectator.com/sports/2022/04/03/i-want-to-get-it-right-softball-head-coach-jen-teague-uses-her-experience-to-frame-her-leadership/",
+      author: "Matthew Rowell",
+      img: ""
     },
     {
-      title:
-        "‘Roar, Lion, Roar’: The Varsity Show’s history with Columbia Athletics",
-      link: "https://www.columbiaspectator.com/arts-and-entertainment/2021/10/12/roar-lion-roar-the-varsity-shows-history-with-columbia-athletics/",
-      author: "Sophie Craig",
-      img: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/PGYDGOEPAFDMFC2YJGBTC4R7MI.png",
+      title: "Mitts and Paws: The Rise of Columbia softball from a club team to an Ivy League phenomenon",
+      link: "https://www.columbiaspectator.com/sports/2022/04/03/mitts-and-paws-the-rise-of-columbia-softball-from-a-club-team-to-an-ivy-league-phenomenon/",
+      author: "Alejandra García Corominas",
+      img: ""
     },
     {
-      title:
-        "Tried and true restaurants around Columbia to try this Homecoming weekend",
-      link: "https://www.columbiaspectator.com/arts-and-entertainment/2021/10/12/tried-and-true-restaurants-around-columbia-to-try-this-homecoming-weekend/",
-      author: "Julia Tong",
-      img: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/6ATAAOC7RNCABDNBXKRHJKJ5J4.JPG",
-    },
-    {
-      title: "10 restaurants perfect for Columbia’s Homecoming in Inwood",
-      link: "https://www.columbiaspectator.com/arts-and-entertainment/2021/10/12/10-restaurants-perfect-for-columbias-homecoming-in-inwood/",
-      author: "Irene Madrigal",
-      img: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/5HBG2WYTHVCY7BT5FLVZ5OL4QA.JPG",
-    },
-    {
-      title: "Tales of Nine of Columbia’s forgotten, fabled restaurants",
-      link: "https://www.columbiaspectator.com/arts-and-entertainment/2021/10/13/tales-of-nine-of-columbias-forgotten-fabled-restaurants/",
-      author: "Emma Schartz",
-      img: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/SQJ3AKINJVAODDD5GOE7UABUDI.jpg",
-    },
-  ],
-  Historic: [
-    {
-      title: "Columbia gunning for 400th win in Homecoming clash against Penn",
-      link: "https://www.columbiaspectator.com/sports/2021/10/13/columbia-gunning-for-400th-win-in-homecoming-clash-against-penn/",
-      author: "Matthew Kim and Bernard Wang",
-      img: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/5HOYGIIE3RCVXPUQMFZWXDFAJI.jpg",
-    },
-    {
-      title:
-        "60 years later: A look back at the 1961 football squad, Columbia’s one and only champion",
-      link: "https://www.columbiaspectator.com/sports/2021/10/14/60-years-later-a-look-back-at-the-1961-football-squad-columbias-one-and-only-champion/",
-      author: "Matthew Kim",
-      img: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/WZHBY65AFZELLLAHT3EQINXSZ4.jpg",
-    },
-    {
-      title:
-        "Football defeats Penn 44-6 in largest Homecoming victory in program’s 149-year history",
-      link: "https://www.columbiaspectator.com/sports/2019/10/19/football-defeats-penn-44-6-in-largest-homecoming-victory-in-programs-149-year-history/",
-      author: "Harris Walker and Elizabeth Karpen",
-      img: "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/JV3NGZQ75ZADBLVIA6PW65WIRU.jpg",
-    },
-    {
-      title:
-        "Columbia football is back. These are the players to watch this season",
-      link: "https://www.columbiaspectator.com/sports/2021/09/22/columbia-football-is-back-these-are-the-players-to-watch-this-season/",
-      author: "Matthew Kim",
-      img: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/3XQQKHA3TBDS5ATFGCVRWZMHOI.jpg",
+      title: "Princeton outpaces expectations, stands atop Ivy League softball with Harvard",
+      link: "https://www.columbiaspectator.com/sports/2022/04/04/princeton-outpaces-expectations-stands-atop-ivy-league-softball-with-harvard/",
+      author: "Annelie Hyatt ",
+      img: ""
     }
   ]
-  // Photo: [
-  //   {
-  //     title: "Columbia does not deserve alumni donations",
-  //     link: "https://www.columbiaspectator.com/opinion/2021/04/01/columbia-does-not-deserve-alumni-donations/",
-  //     author: "Joel Berg",
-  //     img: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/VY5OFVDG5JAN5NCPLBYPGJEGWU.jpg",
-  //   },
-  // ],
 };
 export default GlobalData;
