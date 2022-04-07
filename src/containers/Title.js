@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components'
 import ImgSrc_mobile from '../images/background.png';
 import ImgSrc_desktop from '../images/background1.png';
-import {Desktop, MobileAndTablet} from 'react-responsive-simple'
+import { Desktop, MobileAndTablet } from 'react-responsive-simple'
 
 const TitleWrapper = styled.div`
-    overflow: hidden;
-    width: 100vw;
+    // overflow: hidden;
+    // width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: space-between;
@@ -47,7 +47,7 @@ const TitleButton = styled.a`
     }
 `
 
-const SectionContainer=styled.div`
+const SectionContainer = styled.div`
     box-sizing: border-box;
     border-top: 5px solid white;
     height: 100%;
@@ -55,7 +55,7 @@ const SectionContainer=styled.div`
     padding: 0 3rem;
     margin-top: 10rem;
     /*padding-top: 10rem;*/
-    width: 30%;
+    width: 100%;
     
     @media only screen and (max-width: 500px){
         position: absolute;
@@ -66,12 +66,13 @@ const SectionContainer=styled.div`
     }
 `;
 
-const CommencementHeader=styled.div`
+const CommencementHeader = styled.div`
     color:white;
     text-transform: uppercase;
-    margin-top: 6rem;
-    margin-right: 1rem;
-    position: absolute;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
     top: 8px;
     line-height:1em;
     right: 16px;
@@ -111,42 +112,36 @@ const Logo = styled.img`
 `
 
 export default class Title extends React.Component {
-    
-    render(){
+
+    render() {
         //onClick={()=>{this.props.navigateTo(i)}} 
-        const SectionButtons = this.props.sections.map((el, i)=>(
-            <TitleButton href={`/#${el === "A&E" ? "Arts and Entertainment" : el}`} key={i}><h2>{el}</h2><div/></TitleButton> 
+        const SectionButtons = this.props.sections.map((el, i) => (
+            <TitleButton href={`/#${el === "A&E" ? "Arts and Entertainment" : el}`} key={i}><h2>{el}</h2><div /></TitleButton>
         ))
-        return(
+        return (
             <div>
                 <Desktop>
                     <TitleWrapper img={ImgSrc_desktop}>
-                        <CommencementHeader><h1>Homecoming 2021</h1></CommencementHeader>
-                        <SectionContainer>
-                            {SectionButtons}
-                        </SectionContainer>
-                        
+                        <CommencementHeader><h1>Baseball & Softball</h1></CommencementHeader>
+
                         <a href="https://www.columbiaspectator.com/">
                             <Logo src="https://s3.amazonaws.com/year-in-review-assets/whitemasthead.png" />
                         </a>
                         {/* <Logo href="https://www.columbiaspectator.com/"/> */}
-                        
+
                     </TitleWrapper>
                 </Desktop>
-            <MobileAndTablet>
-                <TitleWrapper img={ImgSrc_mobile}>
-                    <CommencementHeader><h1 style={{'line-height': '1.5em'}}>Homecoming 2021</h1></CommencementHeader>
-                    <SectionContainer>
-                        {SectionButtons}
-                    </SectionContainer>
-                    
-                    <a href="https://www.columbiaspectator.com/">
-                        <Logo src="https://s3.amazonaws.com/year-in-review-assets/whitemasthead.png" />
-                    </a>
-                    {/* <Logo href="https://www.columbiaspectator.com/"/> */}
-                    
-                </TitleWrapper>
-            </MobileAndTablet>
+                <MobileAndTablet>
+                    <TitleWrapper img={ImgSrc_mobile}>
+                        <CommencementHeader><h1 style={{ 'line-height': '1.5em' }}>Baseball & Softball</h1></CommencementHeader>
+
+                        <a href="https://www.columbiaspectator.com/">
+                            <Logo src="https://s3.amazonaws.com/year-in-review-assets/whitemasthead.png" />
+                        </a>
+                        {/* <Logo href="https://www.columbiaspectator.com/"/> */}
+
+                    </TitleWrapper>
+                </MobileAndTablet>
             </div>
         )
     }
