@@ -144,7 +144,7 @@ const Credits = {
   //     title: "Deputy Product Designer",
   //   },
   // ],
-  "Newsroom Development": [
+  "Design and Development": [
     {
       name: "Hong Sen Du",
       title: "Head of Newsroom Development",

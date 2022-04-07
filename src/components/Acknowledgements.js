@@ -123,65 +123,12 @@ const Division = ({ section }) => {
   }
 };
 
-const dev_creds = [
-  {
-    name: "Hong Sen Du",
-    title: "Head of Newsroom Development",
-  },
-  {
-    name: "Cindy Espinosa",
-    title: "Head of Product",
-  },
-  {
-    name: "Sagarika Sharma",
-    title: "Deputy Product Designer",
-  },
-  {
-    name: "Raymond Banke",
-    title: "Deputy Product Designer",
-  },
-  {
-    name: "Victoria Geh",
-    title: "Deputy Newsroom Developer",
-  },
-  {
-    name: "Evan Li",
-    title: "Deputy Newsroom Developer",
-  },
-  {
-    name: "Patrick Puma",
-    title: "Deputy Newsroom Developer",
-  },
-  {
-    name: "Elaine Lee",
-    title: "Newsroom Developer",
-  },
-  {
-    name: "Gulshan Meem",
-    title: "Newsroom Developer",
-  },
-  {
-    name: "Kevin Wang",
-    title: "Newsroom Developer",
-  },
-  {
-    name: "Noah Bergam",
-    title: "Newsroom Development Trainee",
-  },
-  {
-    name: "Joonsoo Lee",
-    title: "Newsroom Development Trainee",
-  },
-  {
-    name: "James Yiu",
-    title: "Newsroom Development Trainee",
-  },
-];
+
 
 const Acknowledgments = () => {
-  var panel1 = ["Sports", "Photo", "Illustrations"];
-  var panel2 = ["Copy", "Newsroom Development"];
-  var panel3 = ["Product"];
+  var panel1 = ["Sports", "Product"];
+  var panel2 = ["Photo", "Copy"];
+  var panel3 = ["Design and Development", "Illustrations"];
 
   return (
     <Wrapper id="Acknowledgments">
@@ -189,11 +136,11 @@ const Acknowledgments = () => {
         <Title>Thanks</Title>
         <Desktop>
           <PanelContainer>
-            {/* <Panel>
+            <Panel>
               {panel1.map((element, i) => (
                 <Division key={i} section={element} />
               ))}
-            </Panel> */}
+            </Panel>
             <Panel>
               {panel2.map((element, i) => (
                 <Division key={i + 100} section={element} />
@@ -224,36 +171,6 @@ const Acknowledgments = () => {
             </Panel>
           </PanelContainer>
         </MobileAndTablet>
-        <Title>Design and Development</Title>
-        <DevWrap>
-          <div>
-            {dev_creds.slice(0, 4).map((cred) => {
-              return (
-                <Dev>
-                  <Name>{cred.name}</Name> <Position>{cred.title}</Position>
-                </Dev>
-              );
-            })}
-          </div>
-          <div>
-            {dev_creds.slice(4, 8).map((cred) => {
-              return (
-                <Dev>
-                  <Name>{cred.name}</Name> <Position>{cred.title}</Position>
-                </Dev>
-              );
-            })}
-          </div>
-          <div>
-            {dev_creds.slice(8, 12).map((cred) => {
-              return (
-                <Dev>
-                  <Name>{cred.name}</Name> <Position>{cred.title}</Position>
-                </Dev>
-              );
-            })}
-          </div>
-        </DevWrap>
       </BoxDiv>
     </Wrapper>
   );
