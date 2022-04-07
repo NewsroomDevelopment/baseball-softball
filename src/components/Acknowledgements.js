@@ -14,12 +14,12 @@ const Wrapper = styled.div`
 `;
 
 const BoxDiv = styled.div`
-    margin: 5%;
-    padding: 2%;
-    padding-left: 4%;
-    padding-right: 4%;
-    border: 1px solid #072465;
-    box-sizing: border-box;
+  margin: 5%;
+  padding: 2%;
+  padding-left: 4%;
+  padding-right: 4%;
+  border: 1px solid #072465;
+  box-sizing: border-box;
 `;
 
 const Title = styled.div`
@@ -59,7 +59,7 @@ const Section = styled.div`
 
 const Name = styled.div`
   font-size: 0.9rem;
-  color:#072465;
+  color: #072465;
   font-weight: bold;
   font-style: italic;
   white-space: pre;
@@ -121,7 +121,7 @@ const Division = ({ section }) => {
   } else {
     return null;
   }
-}
+};
 
 const dev_creds = [
   {
@@ -180,84 +180,83 @@ const dev_creds = [
 
 const Acknowledgments = () => {
   var panel1 = ["Corporate Board", "Spectrum", "A&E"];
-  var panel2 = ["Sports", "Engineering", "Photo",];
-  var panel3 = ["Opinion", "Copy"];
+  var panel2 = ["Sports", "Photo", "Illustrations"];
+  var panel3 = ["Copy", "Newsroom Development", "Product"];
 
   return (
     <Wrapper id="Acknowledgments">
       <BoxDiv>
-      <Title>Thanks</Title>
-      <Desktop>
-        <PanelContainer>
-          <Panel>
-            {panel1.map((element, i) => (
-              <Division key={i} section={element} />
-            ))}
-          </Panel>
-          <Panel>
-            {panel2.map((element, i) => (
-              <Division key={i + 100} section={element} />
-            ))}
-          </Panel>
-          <Panel>
-            {panel3.map((element, i) => (
-              <Division key={i + 200} section={element} />
-            ))}
-          </Panel>
-          {/* <Panel>
+        <Title>Thanks</Title>
+        <Desktop>
+          <PanelContainer>
+            {/* <Panel>
+              {panel1.map((element, i) => (
+                <Division key={i} section={element} />
+              ))}
+            </Panel> */}
+            <Panel>
+              {panel2.map((element, i) => (
+                <Division key={i + 100} section={element} />
+              ))}
+            </Panel>
+            <Panel>
+              {panel3.map((element, i) => (
+                <Division key={i + 200} section={element} />
+              ))}
+            </Panel>
+            {/* <Panel>
               {panel4.map((element, i) => (
                 <Division key={i + 300} section={element} />
               ))}
             </Panel> */}
-        </PanelContainer>
-      </Desktop>
-      <MobileAndTablet>
-        <PanelContainer>
-          <Panel>
-            {panel1
-              .concat(panel2)
-              .concat(panel3)
-              // .concat(panel4)
-              .map((element, x) => (
-                <Division section={element} />
-              ))}
-          </Panel>
-        </PanelContainer>
-      </MobileAndTablet>
-      <Title>Design and Development</Title>
-      <DevWrap>
-        <div>
-          {dev_creds.slice(0, 4).map((cred) => {
-            return (
-              <Dev>
-                <Name>{cred.name}</Name> <Position>{cred.title}</Position>
-              </Dev>
-            );
-          })}
-        </div>
-        <div>
-          {dev_creds.slice(4, 8).map((cred) => {
-            return (
-              <Dev>
-                <Name>{cred.name}</Name> <Position>{cred.title}</Position>
-              </Dev>
-            );
-          })}
-        </div>
-        <div>
-          {dev_creds.slice(8, 12).map((cred) => {
-            return (
-              <Dev>
-                <Name>{cred.name}</Name> <Position>{cred.title}</Position>
-              </Dev>
-            );
-          })}
-        </div>
-      </DevWrap>
+          </PanelContainer>
+        </Desktop>
+        <MobileAndTablet>
+          <PanelContainer>
+            <Panel>
+              {panel1
+                .concat(panel2)
+                .concat(panel3)
+                // .concat(panel4)
+                .map((element, x) => (
+                  <Division section={element} />
+                ))}
+            </Panel>
+          </PanelContainer>
+        </MobileAndTablet>
+        <Title>Design and Development</Title>
+        <DevWrap>
+          <div>
+            {dev_creds.slice(0, 4).map((cred) => {
+              return (
+                <Dev>
+                  <Name>{cred.name}</Name> <Position>{cred.title}</Position>
+                </Dev>
+              );
+            })}
+          </div>
+          <div>
+            {dev_creds.slice(4, 8).map((cred) => {
+              return (
+                <Dev>
+                  <Name>{cred.name}</Name> <Position>{cred.title}</Position>
+                </Dev>
+              );
+            })}
+          </div>
+          <div>
+            {dev_creds.slice(8, 12).map((cred) => {
+              return (
+                <Dev>
+                  <Name>{cred.name}</Name> <Position>{cred.title}</Position>
+                </Dev>
+              );
+            })}
+          </div>
+        </DevWrap>
       </BoxDiv>
     </Wrapper>
   );
-}
-
+};
 
 export default Acknowledgments;
