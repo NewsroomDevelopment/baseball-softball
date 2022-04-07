@@ -121,7 +121,7 @@ export default class Title extends React.Component {
         return (
             <div>
                 <Desktop>
-                    <TitleWrapper img={ImgSrc_desktop}>
+                    <TitleWrapper img="https://cloudfront-us-east-1.images.arcpublishing.com/spectator/UXHLEWEU4VHURBW3CKHHOR5UDY.gif">
                         <CommencementHeader><h1>Baseball & Softball</h1></CommencementHeader>
 
                         <a href="https://www.columbiaspectator.com/">
@@ -132,7 +132,7 @@ export default class Title extends React.Component {
                     </TitleWrapper>
                 </Desktop>
                 <MobileAndTablet>
-                    <TitleWrapper img={ImgSrc_mobile}>
+                    <TitleWrapper img="https://cloudfront-us-east-1.images.arcpublishing.com/spectator/UXHLEWEU4VHURBW3CKHHOR5UDY.gif">
                         <CommencementHeader><h1 style={{ 'line-height': '1.5em' }}>Baseball & Softball</h1></CommencementHeader>
 
                         <a href="https://www.columbiaspectator.com/">
