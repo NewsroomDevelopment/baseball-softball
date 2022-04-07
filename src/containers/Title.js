@@ -6,8 +6,8 @@ import { Desktop, MobileAndTablet } from 'react-responsive-simple';
 import LetterSec from '../components/LetterEditor';
 
 const TitleWrapper = styled.div`
-    overflow: hidden;
-    width: 100vw;
+    // overflow: hidden;
+    // width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: space-between;
@@ -55,7 +55,7 @@ const SectionContainer = styled.div`
     padding: 0 3rem;
     margin-top: 10rem;
     /*padding-top: 10rem;*/
-    width: 30%;
+    width: 100%;
     
     @media only screen and (max-width: 500px){
         position: absolute;
@@ -69,9 +69,10 @@ const SectionContainer = styled.div`
 const CommencementHeader = styled.div`
     color:white;
     text-transform: uppercase;
-    margin-top: 6rem;
-    margin-right: 1rem;
-    position: absolute;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
     top: 8px;
     line-height:1em;
     right: 16px;
@@ -110,45 +111,38 @@ const Logo = styled.img`
     }
 `
 
-const Title = ({ sections }) => {
+export default class Title extends React.Component {
 
-    //onClick={()=>{navigateTo(i)}} 
-    const SectionButtons = sections.map((el, i) => (
-        <TitleButton href={`/#${el === "A&E" ? "Arts and Entertainment" : el}`} key={i}><h2>{el}</h2><div /></TitleButton>
-    ))
-    return (
-        <div>
-            <Desktop>
-                <TitleWrapper img={ImgSrc_desktop}>
-                    <CommencementHeader><h1>Baseball & Softball</h1></CommencementHeader>
-                    <SectionContainer>
-                        {SectionButtons}
-                    </SectionContainer>
+    render() {
+        //onClick={()=>{this.props.navigateTo(i)}} 
+        const SectionButtons = this.props.sections.map((el, i) => (
+            <TitleButton href={`/#${el === "A&E" ? "Arts and Entertainment" : el}`} key={i}><h2>{el}</h2><div /></TitleButton>
+        ))
+        return (
+            <div>
+                <Desktop>
+                    <TitleWrapper img={ImgSrc_desktop}>
+                        <CommencementHeader><h1>Baseball & Softball</h1></CommencementHeader>
 
-                    <a href="https://www.columbiaspectator.com/">
-                        <Logo src="https://s3.amazonaws.com/year-in-review-assets/whitemasthead.png" />
-                    </a>
-                    {/* <Logo href="https://www.columbiaspectator.com/"/> */}
+                        <a href="https://www.columbiaspectator.com/">
+                            <Logo src="https://s3.amazonaws.com/year-in-review-assets/whitemasthead.png" />
+                        </a>
+                        {/* <Logo href="https://www.columbiaspectator.com/"/> */}
 
-                </TitleWrapper>
-                <LetterSec />
-            </Desktop>
-            <MobileAndTablet>
-                <TitleWrapper img={ImgSrc_mobile}>
-                    <CommencementHeader><h1 style={{ 'line-height': '1.5em' }}>Baseball & Softball</h1></CommencementHeader>
-                    <SectionContainer>
-                        {SectionButtons}
-                    </SectionContainer>
+                    </TitleWrapper>
+                </Desktop>
+                <MobileAndTablet>
+                    <TitleWrapper img={ImgSrc_mobile}>
+                        <CommencementHeader><h1 style={{ 'line-height': '1.5em' }}>Baseball & Softball</h1></CommencementHeader>
 
-                    <a href="https://www.columbiaspectator.com/">
-                        <Logo src="https://s3.amazonaws.com/year-in-review-assets/whitemasthead.png" />
-                    </a>
-                    {/* <Logo href="https://www.columbiaspectator.com/"/> */}
+                        <a href="https://www.columbiaspectator.com/">
+                            <Logo src="https://s3.amazonaws.com/year-in-review-assets/whitemasthead.png" />
+                        </a>
+                        {/* <Logo href="https://www.columbiaspectator.com/"/> */}
 
-                </TitleWrapper>
-                <LetterSec />
-            </MobileAndTablet>
-        </div>
-    )
+                    </TitleWrapper>
+                </MobileAndTablet>
+            </div>
+        )
+    }
 }
-export default Title;
