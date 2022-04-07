@@ -35,6 +35,7 @@ const ArticlesWrapper = styled.div`
 const Row = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
   width: 100%;
 `;
@@ -51,13 +52,20 @@ const Section = ({ name, _ref, ad, miniTitle, blurb, data }) => {
     };
     if (name != "Spotlights") return <ArticleBox key={i} data={el} id={id} />;
     else {
-      if (i % 2 != 1 && i != 5)
-      return (
-        <Row>
-          <SpotlightBlock key={i} data={el} id={id} />
-          <SpotlightBlock key={i + 1} data={data[i + 1]} id={id} />
-        </Row>
-      );
+      if (i % 2 != 1 && i != 2) {
+        return (
+          <Row>
+            <SpotlightBlock key={i} data={el} id={id} />
+            <SpotlightBlock key={i + 1} data={data[i + 1]} id={id} />
+          </Row>
+        );
+      } else if (i == 2) {
+        return (
+          <Row>
+            <SpotlightBlock key={i} data={el} id={id} />
+          </Row>
+        );
+      }
     }
 
     //return <ArticleBox key={i} data={el} id={id} />;
