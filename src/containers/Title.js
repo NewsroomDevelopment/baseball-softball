@@ -4,6 +4,7 @@ import ImgSrc_mobile from '../images/background.png';
 import ImgSrc_desktop from '../images/background1.png';
 import { Desktop, MobileAndTablet } from 'react-responsive-simple';
 import LetterSec from '../components/LetterEditor';
+import Navbar3 from '../components/Navbar3';
 
 const TitleWrapper = styled.div`
     // overflow: hidden;
@@ -121,6 +122,7 @@ export default class Title extends React.Component {
         return (
             <div>
                 <Desktop>
+                    <Navbar3></Navbar3>
                     <TitleWrapper img="https://cloudfront-us-east-1.images.arcpublishing.com/spectator/UXHLEWEU4VHURBW3CKHHOR5UDY.gif">
                         <CommencementHeader><h1>Baseball & Softball</h1></CommencementHeader>
 
@@ -132,6 +134,7 @@ export default class Title extends React.Component {
                     </TitleWrapper>
                 </Desktop>
                 <MobileAndTablet>
+                    <Navbar3></Navbar3>
                     <TitleWrapper img="https://cloudfront-us-east-1.images.arcpublishing.com/spectator/UXHLEWEU4VHURBW3CKHHOR5UDY.gif">
                         <CommencementHeader><h1 style={{ 'line-height': '1.5em' }}>Baseball & Softball</h1></CommencementHeader>
 
