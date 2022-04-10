@@ -42,7 +42,7 @@ const GlobalData = {
       title: "‘I want to get it right’: Softball head coach Jen Teague uses her experiences to frame her leadership",
       link: "https://www.columbiaspectator.com/sports/2022/04/03/i-want-to-get-it-right-softball-head-coach-jen-teague-uses-her-experience-to-frame-her-leadership/",
       author: "Matthew Rowell",
-      img: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/7ZSN3H3NBNA7JDBA5NXW2UR244.jpg "
+      img: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/NYO5WTRQVND4ZHCZ663XO5T6CI.png "
     }
   ],
   "Historic": [
