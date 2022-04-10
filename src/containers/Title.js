@@ -5,6 +5,7 @@ import ImgSrc_desktop from '../images/background1.png';
 import { Desktop, MobileAndTablet } from 'react-responsive-simple';
 import LetterSec from '../components/LetterEditor';
 import Navbar3 from '../components/Navbar3';
+import crown from "../components/image 1.png";
 
 const TitleWrapper = styled.div`
     // overflow: hidden;
@@ -100,7 +101,6 @@ const Logo = styled.img`
     position: absolute;
     top: 20px;
     right: 20px;
-    width: 25rem;
 
     @media only screen and (max-width: 500px){
         margin: 1rem;
@@ -127,7 +127,7 @@ export default class Title extends React.Component {
                         <CommencementHeader><h1>Baseball & Softball</h1></CommencementHeader>
 
                         <a href="https://www.columbiaspectator.com/">
-                            <Logo src="https://s3.amazonaws.com/year-in-review-assets/whitemasthead.png" />
+                            <Logo src={crown} width="60rem" />
                         </a>
                         {/* <Logo href="https://www.columbiaspectator.com/"/> */}
 
@@ -139,7 +139,7 @@ export default class Title extends React.Component {
                         <CommencementHeader><h1 style={{ 'line-height': '1.5em' }}>Baseball & Softball</h1></CommencementHeader>
 
                         <a href="https://www.columbiaspectator.com/">
-                            <Logo src="https://s3.amazonaws.com/year-in-review-assets/whitemasthead.png" />
+                            <Logo src={crown} width="60rem" />
                         </a>
                         {/* <Logo href="https://www.columbiaspectator.com/"/> */}
 

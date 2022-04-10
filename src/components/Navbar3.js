@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import ellipse from "./ellipse.png";
 
 const NavSection = styled.div`
 background-color: #0D2661;
@@ -19,7 +20,7 @@ const Logo = styled.div`
     z-index:100;
     position:relative;
     left:5%;
-`;
+ `;
 
 const SectionText = styled.div`
   font-size: 1.5rem;
@@ -29,7 +30,7 @@ const SectionText = styled.div`
   font-family: "brandon-grotesque";
   font-style: normal;
   font-weight: normal;
-  padding-left: 0.5em;
+  padding-left: 7%;
   cursor: pointer;
 }
 `;
@@ -63,7 +64,9 @@ const Navbar3 = ({ current, setSection }) => {
     <NavSection>
         {Object.keys(sections).map((section) => (
           <SectionText>
-            <Title><a href = {`#${sections[section]}`}>{section}</a></Title>
+            <Title>
+            <img src = {ellipse} height="20rem" width="20rem"></img>
+            <a href = {`#${sections[section]}`}>{section}</a></Title>
           </SectionText>
         ))}
     </NavSection >
