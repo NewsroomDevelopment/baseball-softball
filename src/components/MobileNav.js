@@ -39,7 +39,7 @@ const Tab = styled.a`
     line-height: 1.85em;
     color: white;
     text-align: center;
-    font-family: "brandon-grotesque";
+    font-family: Bangers;
     font-style: normal;
     font-weight: normal;
     padding-left: 0.5em;
