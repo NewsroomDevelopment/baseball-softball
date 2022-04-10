@@ -42,15 +42,15 @@ const GlobalData = {
       title: "‘I want to get it right’: Softball head coach Jen Teague uses her experiences to frame her leadership",
       link: "https://www.columbiaspectator.com/sports/2022/04/03/i-want-to-get-it-right-softball-head-coach-jen-teague-uses-her-experience-to-frame-her-leadership/",
       author: "Matthew Rowell",
-      img: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/7ZSN3H3NBNA7JDBA5NXW2UR244.jpg "
+      img: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/NYO5WTRQVND4ZHCZ663XO5T6CI.png "
     }
   ],
   "Historic": [
     {
       title: "Columbia Lou: A look back at Lou Gehrig’s enduring legacy",
-      link: "https://www.instagram.com/",
+      link: "https://www.columbiaspectator.com/podcasts/2022/04/08/columbia-lou-a-look-back-at-lou-gehrigs-enduring-legacy/",
       author: "Caleb Dye and Owen Tesoro",
-      img: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/FOTMLXOU3FFG5JVAH3SZHGVQV4.jpg "
+      img: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/MRGGWODX45FH3LRDIIKOU3XCJI.jpg "
     },
     {
       title: "Mitts and Paws: The Rise of Columbia softball from a club team to an Ivy League phenomenon",
