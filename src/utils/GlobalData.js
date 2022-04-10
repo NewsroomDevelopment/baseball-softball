@@ -48,9 +48,9 @@ const GlobalData = {
   "Historic": [
     {
       title: "Columbia Lou: A look back at Lou Gehrig’s enduring legacy",
-      link: "https://www.instagram.com/",
+      link: "https://www.columbiaspectator.com/podcasts/2022/04/08/columbia-lou-a-look-back-at-lou-gehrigs-enduring-legacy/",
       author: "Caleb Dye and Owen Tesoro",
-      img: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/FOTMLXOU3FFG5JVAH3SZHGVQV4.jpg "
+      img: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/MRGGWODX45FH3LRDIIKOU3XCJI.jpg "
     },
     {
       title: "Mitts and Paws: The Rise of Columbia softball from a club team to an Ivy League phenomenon",
