@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ellipse from "./ellipse.png";
+import { device } from "../device";
 
 const NavSection = styled.div`
 background-color: #0D2661;
@@ -14,13 +15,20 @@ ${({ fixed }) => fixed && `
   top: 0;
   z-index: 2;
 `}
+@media ${device.mobile} {
+  display: none;
+}
+
 `;
 
 const Logo = styled.div`
     z-index:100;
     position:relative;
     left:5%;
- `;
+    @media ${device.mobile} {
+      display: none;
+    }
+`;
 
 const SectionText = styled.div`
   font-size: 1.5rem;
@@ -32,6 +40,9 @@ const SectionText = styled.div`
   font-weight: normal;
   padding-left: 7%;
   cursor: pointer;
+  @media ${device.mobile} {
+    display: none;
+  }
 }
 `;
 
@@ -45,6 +56,9 @@ const Title = styled.div`
       font-size: 1rem;
   }
   padding-right:4rem;
+  @media ${device.mobile} {
+    display: none;
+  }
 }
 `;
 

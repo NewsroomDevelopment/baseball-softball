@@ -7,6 +7,8 @@ import LetterSec from '../components/LetterEditor';
 import Navbar3 from '../components/Navbar3';
 import crown from "../components/image 1.png";
 
+import MobileNavBar from '../components/MobileNav';
+import { device } from "../device";
 const TitleWrapper = styled.div`
     // overflow: hidden;
     // width: 100vw;
@@ -110,6 +112,9 @@ const Logo = styled.img`
         top: inherit;
         right: inherit;
     }
+    @media ${device.mobile} {
+        display: none;
+      }
 `
 
 export default class Title extends React.Component {
@@ -121,6 +126,7 @@ export default class Title extends React.Component {
         ))
         return (
             <div>
+                <MobileNavBar></MobileNavBar>
                 <Desktop>
                     <Navbar3></Navbar3>
                     <TitleWrapper img="https://cloudfront-us-east-1.images.arcpublishing.com/spectator/UXHLEWEU4VHURBW3CKHHOR5UDY.gif">
