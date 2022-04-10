@@ -39,7 +39,11 @@ const Tab = styled.a`
     line-height: 1.85em;
     color: white;
     text-align: center;
+<<<<<<< HEAD
     font-family: "Bangers";
+=======
+    font-family: Bangers;
+>>>>>>> b8d8e3d220729e68ca4a3a5801e5cff3481fce4e
     font-style: normal;
     font-weight: normal;
     padding-left: 0.5em;
